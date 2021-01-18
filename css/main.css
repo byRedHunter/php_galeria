@@ -1,0 +1,192 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	background-color: rgb(47, 19, 36);
+	color: #eee;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 110rem;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.titulo {
+	text-align: center;
+	margin: 2rem 0;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+}
+
+.fotos {
+	margin-top: 4rem;
+}
+.fotos .contenedor {
+	display: flex;
+	gap: 4rem;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.thumb {
+	width: 100%;
+	height: 30rem;
+	overflow: hidden;
+	border-radius: 1rem;
+}
+.thumb:hover img {
+	filter: blur(0.1rem);
+	border-color: rgb(168, 85, 135);
+}
+.thumb a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+.thumb a img {
+	width: 100%;
+	height: 100%;
+	border-radius: 1rem;
+	object-fit: cover;
+	filter: blur(0);
+	transition: 0.3s linear;
+	transform-origin: center;
+	border: 0.5rem solid transparent;
+}
+
+.paginacion .contenedor {
+	display: flex;
+	margin-top: 2rem;
+}
+
+.paginacion a:first-child {
+	margin-right: auto;
+}
+.paginacion a:last-child {
+	margin-left: auto;
+}
+.button {
+	padding: 1rem;
+	width: 47%;
+	max-width: 30rem;
+	text-align: center;
+	border: 0.3rem solid rgb(231, 136, 193);
+	color: #eee;
+	border-radius: 2rem;
+	text-decoration: none;
+	transition: 0.3s ease-in;
+	background: transparent;
+	cursor: pointer;
+}
+.button:hover {
+	background: rgba(92, 57, 78, 0.767);
+}
+
+.foto {
+	text-align: center;
+}
+.foto img.modal {
+	height: 30rem;
+	width: 30rem;
+	object-fit: cover;
+	border: 1rem solid rgb(168, 85, 135);
+	border-radius: 0.5rem;
+	margin-bottom: 2rem;
+}
+.foto .texto {
+	margin: 2rem 0 4rem;
+}
+.regresar {
+	padding-left: 4rem;
+	padding-right: 4rem;
+}
+
+.formulario {
+	width: 100%;
+	max-width: 40rem;
+	margin: 0 auto;
+}
+label,
+input,
+textarea,
+button {
+	display: block;
+	width: 100%;
+	outline: none;
+}
+input {
+	margin-bottom: 2rem;
+}
+input[type='file'] {
+	margin-top: 1rem;
+}
+
+input[type='text'],
+textarea {
+	min-width: 100%;
+	max-width: 100%;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	background: transparent;
+	border: 0.3rem solid rgb(168, 85, 135);
+	margin-top: 1rem;
+	color: #eee;
+}
+label {
+	font-weight: bold;
+}
+textarea {
+	min-height: 10rem;
+}
+.formulario button {
+	margin-top: 4rem;
+}
+
+.error {
+	background: rgb(240, 87, 87);
+	color: #111;
+	padding: 2rem;
+	margin-top: 2rem;
+	border-radius: 2rem;
+}
+
+@media screen and (min-width: 400px) {
+	.fotos .contenedor {
+		justify-content: center;
+	}
+
+	.thumb {
+		height: 30rem;
+		width: 30rem;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.thumb {
+		height: 25rem;
+		width: 25rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.thumb {
+		height: 20rem;
+		width: 20rem;
+	}
+	.paginacion .contenedor {
+		padding-left: 10rem;
+		padding-right: 10rem;
+	}
+}
